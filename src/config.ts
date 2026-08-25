@@ -18,38 +18,38 @@ const en = {
     },
     experiences: [
         {
-            position: "Understand the task",
-            company: "find where the money leaks",
+            position: "Analyze the task",
+            company: "requirements, goal, bottlenecks",
             period: "01",
             location: "Remote",
-            description: "I look past how the task was described to where time and money actually leak. Often those are two different things — and finding the real one is half the job.",
+            description: "I dig into the process and the requirements, pin down the goal and where resources — time, money, team effort — are being spent. The output is a clear spec, not a vague wish.",
             responsibilities: [],
             technologies: []
         },
         {
-            position: "Propose a solution",
-            company: "simple, without the bloat",
+            position: "Design the solution",
+            company: "architecture and plan",
             period: "02",
             location: "Remote",
-            description: "I show what's worth building and what isn't, and take the shortest path to the result instead of over-engineering it.",
+            description: "I design the solution and its architecture for the task — what we build, in what order and with which tools — choosing the shortest reliable path to the result.",
             responsibilities: [],
             technologies: []
         },
         {
-            position: "Build and ship",
-            company: "working version, deployed",
+            position: "Develop and deploy",
+            company: "working version, production",
             period: "03",
             location: "Remote",
-            description: "I get a working version up fast, adjust it as we go, and deploy it to a real server — not a demo that only runs on my laptop.",
+            description: "I build it in iterations, show progress, test it and roll it out to production on real infrastructure — not a demo that only runs on my laptop.",
             responsibilities: [],
             technologies: []
         },
         {
-            position: "Support and grow",
-            company: "so it runs on its own",
+            position: "Maintain and grow",
+            company: "stability and scale",
             period: "04",
             location: "Remote",
-            description: "I set it up to keep running and recover from failures on its own, and I stay in touch to fix and improve it as the business changes.",
+            description: "I set up monitoring and automatic recovery, keep the system running reliably, and evolve it as the business grows.",
             responsibilities: [],
             technologies: []
         }
@@ -109,38 +109,38 @@ const ru: typeof en = {
     },
     experiences: [
         {
-            position: "Разбираюсь в задаче",
-            company: "нахожу, где теряются деньги",
+            position: "Анализирую задачу",
+            company: "требования, цель, узкие места",
             period: "01",
             location: "Удалённо",
-            description: "Смотрю не на то, как задачу описали, а где на самом деле утекают время и деньги. Часто это разные вещи — и найти настоящую задачу уже половина дела.",
+            description: "Разбираюсь в процессе и требованиях, определяю цель и на что уходят ресурсы — время, деньги, силы команды. На выходе — чёткое ТЗ, а не размытое пожелание.",
             responsibilities: [],
             technologies: []
         },
         {
-            position: "Предлагаю решение",
-            company: "просто, без лишнего",
+            position: "Проектирую решение",
+            company: "архитектура и план",
             period: "02",
             location: "Удалённо",
-            description: "Показываю, что стоит делать, а что нет, и беру самый короткий путь к результату — без переусложнения.",
+            description: "Проектирую решение и архитектуру под задачу — что делаем, в каком порядке и какими инструментами, выбирая короткий и надёжный путь к результату.",
             responsibilities: [],
             technologies: []
         },
         {
-            position: "Собираю и запускаю",
-            company: "рабочая версия, в проде",
+            position: "Разрабатываю и выкатываю",
+            company: "рабочая версия, продакшен",
             period: "03",
             location: "Удалённо",
-            description: "Быстро поднимаю рабочую версию, правлю по ходу и выкатываю на реальный сервер — не демо, которое живёт только у меня на ноутбуке.",
+            description: "Собираю итерациями, показываю прогресс, тестирую и разворачиваю в продакшене на реальной инфраструктуре — не демо, которое живёт у меня на ноутбуке.",
             responsibilities: [],
             technologies: []
         },
         {
-            position: "Поддерживаю и развиваю",
-            company: "чтобы работало само",
+            position: "Сопровождаю и развиваю",
+            company: "стабильность и рост",
             period: "04",
             location: "Удалённо",
-            description: "Настраиваю так, чтобы система работала и восстанавливалась после сбоев сама, и остаюсь на связи — чинить и улучшать по мере роста бизнеса.",
+            description: "Настраиваю мониторинг и автоматическое восстановление, держу систему в стабильной работе и развиваю её по мере роста бизнеса.",
             responsibilities: [],
             technologies: []
         }
