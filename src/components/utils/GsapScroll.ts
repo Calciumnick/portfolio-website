@@ -61,15 +61,12 @@ export function setCharTimeline(
     }
   });
   let neckBone = character?.getObjectByName("spine005");
-  const isMobile = window.innerWidth <= 1024;
-  const shiftX1 = isMobile ? "0%" : "-25%";
-  const shiftX2 = isMobile ? "0%" : "-12%";
-  {
+  if (window.innerWidth > 1024) {
     if (character) {
       tl1
         .fromTo(character.rotation, { y: 0 }, { y: 0.7, duration: 1 }, 0)
         .to(camera.position, { z: 22 }, 0)
-        .fromTo(".character-model", { x: 0 }, { x: shiftX1, duration: 1 }, 0)
+        .fromTo(".character-model", { x: 0 }, { x: "-25%", duration: 1 }, 0)
         .to(".landing-container", { opacity: 0, duration: 0.4 }, 0)
         .to(".landing-container", { y: "40%", duration: 0.8 }, 0)
         .fromTo(".about-me", { y: "-50%" }, { y: "0%" }, 0)
@@ -86,7 +83,7 @@ export function setCharTimeline(
         .fromTo(
           ".character-model",
           { pointerEvents: "inherit" },
-          { pointerEvents: "none", x: shiftX2, delay: 2, duration: 5 },
+          { pointerEvents: "none", x: "-12%", delay: 2, duration: 5 },
           0
         )
         .to(character.rotation, { y: 0.92, x: 0.12, delay: 3, duration: 3 }, 0)
@@ -121,6 +118,17 @@ export function setCharTimeline(
         )
         .fromTo(".whatIDO", { y: 0 }, { y: "15%", duration: 2 }, 0)
         .to(character.rotation, { x: -0.04, duration: 2, delay: 1 }, 0);
+    }
+  } else {
+    if (character) {
+      const tM2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".what-box-in",
+          start: "top 70%",
+          end: "bottom top",
+        },
+      });
+      tM2.to(".what-box-in", { display: "flex", duration: 0.1, delay: 0 }, 0);
     }
   }
 }

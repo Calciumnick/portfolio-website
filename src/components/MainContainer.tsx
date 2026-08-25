@@ -44,7 +44,9 @@ const MainContainer = ({ children }: PropsWithChildren) => {
   }, []);
 
   useEffect(() => {
-    // 3D монтируем и на мобилке (статичная модель, без тяжёлой скролл-анимации).
+    // 3D тяжёлый — на мобилке/планшете не монтируем (там показываем фото).
+    if (window.innerWidth <= 1024) return;
+
     let timeoutId: ReturnType<typeof setTimeout> | undefined;
     let idleId: number | undefined;
     const win = window as Window & {
