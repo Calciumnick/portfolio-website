@@ -1,8 +1,5 @@
 import * as THREE from "three";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export function setCharTimeline(
   character: THREE.Object3D<THREE.Object3DEventMap> | null,
@@ -64,37 +61,7 @@ export function setCharTimeline(
     }
   });
   let neckBone = character?.getObjectByName("spine005");
-
-  // МОБИЛКА: статичный «разработчик за столом», проявляется в секции WHAT I DO.
-  if (window.innerWidth <= 1024) {
-    if (character) {
-      // Показываем полную сцену (монитор + подсветка), камера — общий план.
-      if (monitor) monitor.material.opacity = 1;
-      if (screenLight) screenLight.material.opacity = 1;
-      camera.position.set(0, 8.4, 92);
-      camera.updateProjectionMatrix();
-      // Сидит боком (три четверти), голова к монитору — как на десктопе.
-      character.rotation.set(0.12, 0.92, 0);
-      if (neckBone) neckBone.rotation.x = 0.6;
-      gsap.set(".character-model", { opacity: 0, x: 0, y: 0 });
-      gsap.set(".character-rim", { opacity: 0 });
-      gsap.set(".what-box-in", { display: "flex" });
-      // Плавное появление/исчезание, привязанное к скроллу секции WHAT I DO.
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".whatIDO",
-            start: "top 85%",
-            endTrigger: ".career-section",
-            end: "bottom 40%",
-            scrub: true,
-          },
-        })
-        .fromTo(".character-model", { opacity: 0 }, { opacity: 1, duration: 0.08 })
-        .to(".character-model", { opacity: 1, duration: 0.87 })
-        .to(".character-model", { opacity: 0, duration: 0.05 });
-    }
-  } else if (window.innerWidth > 1024) {
+  if (window.innerWidth > 1024) {
     if (character) {
       tl1
         .fromTo(character.rotation, { y: 0 }, { y: 0.7, duration: 1 }, 0)
