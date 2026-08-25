@@ -14,6 +14,12 @@ const WorkImage = (props: Props) => {
   const [video, setVideo] = useState("");
   const isExternalLink = Boolean(props.link && !props.link.startsWith("/"));
 
+  const media = props.image ? (
+    <img src={props.image} alt={props.alt} loading="lazy" />
+  ) : (
+    <div className="work-placeholder"><span>{props.alt}</span></div>
+  );
+
   const handleMouseEnter = async () => {
     if (props.video) {
       setIsVideo(true);
@@ -40,7 +46,7 @@ const WorkImage = (props: Props) => {
             <div className="work-link">
               <MdArrowOutward />
             </div>
-            <div className="work-placeholder"><span>{props.alt}</span></div>
+            {media}
             {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
           </a>
         ) : (
@@ -54,7 +60,7 @@ const WorkImage = (props: Props) => {
             <div className="work-link">
               <MdArrowOutward />
             </div>
-            <div className="work-placeholder"><span>{props.alt}</span></div>
+            {media}
             {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
           </Link>
         )
@@ -65,7 +71,7 @@ const WorkImage = (props: Props) => {
           onMouseLeave={() => setIsVideo(false)}
           data-cursor={"disable"}
         >
-          <div className="work-placeholder"><span>{props.alt}</span></div>
+          {media}
           {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
         </div>
       )}
