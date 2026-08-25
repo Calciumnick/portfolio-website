@@ -14,35 +14,35 @@ const en = {
     },
     about: {
         title: "About Me",
-        description: "I'm Mykyta Koltsov — a full-stack developer who turns business problems into software that runs itself. If it can be coded, I build it: web apps, dashboards, Telegram bots, automations that plug into any API. My strongest side is AI and data — LLMs and computer vision wired into pipelines that read, filter and decide at scale, behind a clean interface anyone can use. And I ship the whole thing end-to-end — React/TypeScript on the front, Python or Node and PostgreSQL behind it — deployed on real servers, monitored, and built to keep running without me."
+        description: "I'm Mykyta. I build software that takes a real, annoying problem off someone's plate — and then keeps working without them. Usually it's the boring, repetitive part of a business: reports nobody wants to pull by hand, leads that slip through, data sitting in five different places. I'm most useful when the task is clear but no one has time to do it properly. I like starting from the actual problem, not the tech — and I don't hand over something that only runs on my laptop. If I build it, it's live and it stays up."
     },
     experiences: [
         {
-            position: "Automation & Integrations",
-            company: "APIs, workflows & control panels",
-            period: "AUTO",
+            position: "Understand the real problem",
+            company: "not code for its own sake",
+            period: "01",
             location: "Remote",
-            description: "I connect to any API or service and turn manual routine into automated workflows — data collection, processing and reporting — with a clean dashboard or admin panel on top to run it all.",
+            description: "First I find where time or money is actually leaking. Often the real task isn't the one that was described — spotting that is half the job.",
             responsibilities: [],
-            technologies: ["Automation", "REST APIs", "Webhooks", "Dashboards", "Google APIs", "Python"]
+            technologies: []
         },
         {
-            position: "AI & Data Engineering",
-            company: "LLM pipelines & data",
-            period: "AI",
+            position: "Build and connect",
+            company: "front, back, integrations",
+            period: "02",
             location: "Remote",
-            description: "I build AI pipelines that understand data by meaning — model-agnostic LLM setups with fallback, computer vision, RAG and cost-optimized cascades — on top of scraping, monitoring and solid databases.",
+            description: "I get a working version up fast, show it, and adjust as we go. I wire in the tools and data that are actually needed instead of over-building.",
             responsibilities: [],
-            technologies: ["LLMs", "Computer Vision", "RAG", "Scraping", "PostgreSQL", "Pandas"]
+            technologies: []
         },
         {
-            position: "Full-Stack Development",
-            company: "Web, backend & products",
-            period: "FULL-STACK",
+            position: "Ship it and keep it alive",
+            company: "deploy & monitoring",
+            period: "03",
             location: "Remote",
-            description: "I ship complete products — web apps, dashboards, APIs and bots — with a React/TypeScript front, Python or Node back and PostgreSQL, payments and admin panels, deployed and self-healing.",
+            description: "I put it on a real server, set it to run on its own and recover from failures, and stay around to maintain and grow it.",
             responsibilities: [],
-            technologies: ["React", "TypeScript", "Node", "Python", "PostgreSQL", "Vercel"]
+            technologies: []
         }
     ],
     projects: [
@@ -61,8 +61,8 @@ const en = {
         whatsapp: "https://wa.me/971524893133"
     },
     skills: {
-        develop: { title: "FULL-STACK DEVELOPMENT", description: "Web apps, landing pages, dashboards & APIs — front to back", details: "Complete products end-to-end — web apps, landing pages and admin dashboards on React/TypeScript, backends and APIs on Python or Node, PostgreSQL underneath. Deployed and monitored.", tools: ["Python", "Node", "React", "TypeScript", "FastAPI", "PostgreSQL", "REST APIs", "Docker", "Git", "Vercel"] },
-        design: { title: "AUTOMATION & AI", description: "Automate any workflow, connect any API, add AI on top", details: "I connect to any API and automate workflows end-to-end, then wire in AI — LLM pipelines, computer vision, scraping and monitoring — behind a clean control panel. Deployed on a VPS.", tools: ["Automation", "REST APIs", "Webhooks", "LLMs", "Computer Vision", "Scraping", "Monitoring", "Dashboards", "Pandas", "VPS"] }
+        develop: { title: "FULL-STACK DEVELOPMENT", description: "Websites, web apps, dashboards and internal tools", details: "Need a website, a client portal, a dashboard or an internal tool? I do the front and the back, database and payments included, and ship it to production. No 'designer here, developer there' — one person owns the whole result.", tools: ["Python", "Node", "React", "TypeScript", "FastAPI", "PostgreSQL", "REST APIs", "Docker", "Git", "Vercel"] },
+        design: { title: "AUTOMATION & AI", description: "Kill the manual routine, add AI where it pays off", details: "If something is done by hand every day, it can usually be handed to a program. I connect your tools together, automate collecting and processing data, and where it helps, plug in AI to read documents, sort things and flag what matters — so you open one panel instead of ten tabs.", tools: ["Automation", "REST APIs", "Webhooks", "LLMs", "Computer Vision", "Scraping", "Monitoring", "Dashboards", "Pandas", "VPS"] }
     },
     ui: {
         hello: "Hello! I'm",
@@ -73,7 +73,7 @@ const en = {
         hire: "Hire Me",
         clickHint: "click",
         demoLabel: "DEMO",
-        careerTitle1: "My", careerTitle2: "skills",
+        careerTitle1: "My", careerTitle2: "approach",
         whatIDo: "WHAT I DO",
         workTitle: "My work",
         contactEmail: "Email", contactLocation: "Location", contactSocial: "Social",
@@ -96,35 +96,35 @@ const ru: typeof en = {
     },
     about: {
         title: "Обо мне",
-        description: "Я Mykyta Koltsov — full-stack разработчик, который превращает бизнес-задачи в софт, работающий сам. Если это можно закодить — сделаю: веб-приложения, дашборды, Telegram-боты, автоматизации с подключением к любому API. Моя сильная сторона — ИИ и данные: LLM и компьютерное зрение в конвейерах, которые читают, фильтруют и принимают решения на потоке, за понятным интерфейсом. И собираю всё под ключ — фронт на React/TypeScript, бэк на Python или Node и PostgreSQL — с деплоем на реальные серверы, мониторингом и запасом прочности, чтобы работало без меня."
+        description: "Я Никита. Делаю софт, который снимает с человека реальную надоевшую задачу — и дальше работает без него. Обычно это скучная повторяющаяся часть бизнеса: отчёты, которые никто не хочет собирать руками; заявки, которые теряются; данные, разбросанные по пяти местам. Я полезнее всего там, где задача понятна, но ни у кого нет времени сделать её нормально. Люблю идти от самой проблемы, а не от технологий — и не отдаю то, что работает только у меня на ноутбуке. Если сделал — оно запущено и держится."
     },
     experiences: [
         {
-            position: "Автоматизация и интеграции",
-            company: "API, процессы и панели",
-            period: "AUTO",
+            position: "Разбираюсь, что болит",
+            company: "не код ради кода",
+            period: "01",
             location: "Удалённо",
-            description: "Подключаюсь к любому API или сервису и превращаю ручную рутину в автоматизированные процессы — сбор, обработка и отчётность — с удобным дашбордом или админ-панелью сверху, чтобы всем этим управлять.",
+            description: "Сначала нахожу, где реально утекают время или деньги. Часто настоящая задача — не та, что описали, и увидеть это — половина работы.",
             responsibilities: [],
-            technologies: ["Автоматизация", "REST API", "Webhooks", "Дашборды", "Google API", "Python"]
+            technologies: []
         },
         {
-            position: "ИИ и Data Engineering",
-            company: "LLM-конвейеры и данные",
-            period: "AI",
+            position: "Строю и подключаю",
+            company: "фронт, бэк, интеграции",
+            period: "02",
             location: "Удалённо",
-            description: "Строю ИИ-конвейеры, которые понимают данные по смыслу — модель-агностик LLM-связки с фолбэком, компьютерное зрение, RAG и cost-optimized каскады — поверх парсинга, мониторинга и надёжных баз.",
+            description: "Быстро поднимаю рабочую версию, показываю, правлю по ходу. Подключаю нужные сервисы и данные, а не изобретаю лишнее.",
             responsibilities: [],
-            technologies: ["LLM", "Computer Vision", "RAG", "Парсинг", "PostgreSQL", "Pandas"]
+            technologies: []
         },
         {
-            position: "Full-Stack разработка",
-            company: "Веб, бэкенд и продукты",
-            period: "FULL-STACK",
+            position: "Запускаю и держу живым",
+            company: "деплой и мониторинг",
+            period: "03",
             location: "Удалённо",
-            description: "Собираю продукты целиком — веб-приложения, дашборды, API и ботов — с фронтом на React/TypeScript, бэком на Python или Node и PostgreSQL, оплатами и админ-панелями, задеплоенные и самовосстанавливающиеся.",
+            description: "Выкатываю на реальный сервер, настраиваю так, чтобы работало само и восстанавливалось после сбоев, и остаюсь поддерживать и развивать.",
             responsibilities: [],
-            technologies: ["React", "TypeScript", "Node", "Python", "PostgreSQL", "Vercel"]
+            technologies: []
         }
     ],
     projects: [
@@ -143,8 +143,8 @@ const ru: typeof en = {
         whatsapp: "https://wa.me/971524893133"
     },
     skills: {
-        develop: { title: "FULL-STACK РАЗРАБОТКА", description: "Веб-приложения, лендинги, дашборды и API — от фронта до бэка", details: "Продукты целиком — веб-приложения, лендинги и админ-дашборды на React/TypeScript, бэкенды и API на Python или Node, PostgreSQL под капотом. С деплоем и мониторингом.", tools: ["Python", "Node", "React", "TypeScript", "FastAPI", "PostgreSQL", "REST API", "Docker", "Git", "Vercel"] },
-        design: { title: "АВТОМАТИЗАЦИЯ И ИИ", description: "Автоматизировать любой процесс, подключить любой API, добавить ИИ", details: "Подключаюсь к любому API и автоматизирую процессы под ключ, сверху добавляю ИИ — LLM, зрение, парсинг, мониторинг — за удобной панелью управления. С деплоем на VPS.", tools: ["Автоматизация", "REST API", "Webhooks", "LLM", "Computer Vision", "Парсинг", "Мониторинг", "Дашборды", "Pandas", "VPS"] }
+        develop: { title: "FULL-STACK РАЗРАБОТКА", description: "Сайты, веб-приложения, дашборды и внутренние инструменты", details: "Нужен сайт, личный кабинет, дашборд или внутренний инструмент? Сделаю фронт и бэк целиком, с базой и оплатами, и выкачу в прод. Без «дизайнер отдельно, программист отдельно» — за результат отвечает один человек.", tools: ["Python", "Node", "React", "TypeScript", "FastAPI", "PostgreSQL", "REST API", "Docker", "Git", "Vercel"] },
+        design: { title: "АВТОМАТИЗАЦИЯ И ИИ", description: "Убрать ручную рутину и добавить ИИ там, где он окупается", details: "Если что-то делается руками каждый день — обычно это можно отдать программе. Соединяю ваши сервисы между собой, автоматизирую сбор и обработку данных, а где помогает — подключаю ИИ, чтобы он читал документы, сортировал и подсказывал важное. Вы открываете одну панель вместо десяти вкладок.", tools: ["Автоматизация", "REST API", "Webhooks", "LLM", "Computer Vision", "Парсинг", "Мониторинг", "Дашборды", "Pandas", "VPS"] }
     },
     ui: {
         hello: "Привет! Я",
@@ -155,7 +155,7 @@ const ru: typeof en = {
         hire: "Написать",
         clickHint: "клик",
         demoLabel: "ДЕМО",
-        careerTitle1: "Мои", careerTitle2: "навыки",
+        careerTitle1: "Мой", careerTitle2: "подход",
         whatIDo: "ЧТО Я ДЕЛАЮ",
         workTitle: "Мои работы",
         contactEmail: "Почта", contactLocation: "Локация", contactSocial: "Соцсети",
