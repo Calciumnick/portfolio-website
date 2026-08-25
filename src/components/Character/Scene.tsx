@@ -33,7 +33,9 @@ const Scene = () => {
         powerPreference: "high-performance",
       });
       renderer.setSize(container.width, container.height);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      // На мобилке ограничиваем pixelRatio — легче рендер, меньше нагрузка.
+      const maxPR = window.innerWidth <= 1024 ? 1.25 : 2;
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, maxPR));
       renderer.toneMapping = THREE.ACESFilmicToneMapping;
       renderer.toneMappingExposure = 1;
       canvasDiv.current.appendChild(renderer.domElement);
