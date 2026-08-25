@@ -8,6 +8,7 @@ interface Props {
   alt?: string;
   video?: string;
   link?: string;
+  demo?: boolean;
 }
 
 const WorkImage = (props: Props) => {
@@ -16,8 +17,15 @@ const WorkImage = (props: Props) => {
   const [video, setVideo] = useState("");
   const isExternalLink = Boolean(props.link && !props.link.startsWith("/"));
 
+  const demoBadge = props.demo && props.image ? (
+    <div className="work-demo-badge">{config.ui.demoLabel}</div>
+  ) : null;
+
   const media = props.image ? (
-    <img src={props.image} alt={props.alt} loading="lazy" />
+    <>
+      {demoBadge}
+      <img src={props.image} alt={props.alt} loading="lazy" />
+    </>
   ) : null;
 
   const clickHint = props.link && props.image ? (
