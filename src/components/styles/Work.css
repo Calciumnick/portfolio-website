@@ -99,6 +99,24 @@
   width: 90%;
 }
 
+.work-desc {
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+  color: #c9c8c8 !important;
+  margin-top: 14px !important;
+  margin-bottom: 6px !important;
+  width: 100% !important;
+  font-weight: 300 !important;
+}
+
+@media only screen and (max-width: 1400px) {
+  .work-desc {
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    margin-top: 10px !important;
+  }
+}
+
 .work-image {
   display: flex;
   width: 100%;
