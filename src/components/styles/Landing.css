@@ -25,8 +25,11 @@
     display: none !important;
   }
 
+  /* Модель в 2 раза меньше на телефоне */
   .character-model canvas {
     max-width: 100% !important;
+    transform: scale(0.5) !important;
+    transform-origin: center 60% !important;
   }
 
   /* Роль по центру и без обрезки на мобилке */
