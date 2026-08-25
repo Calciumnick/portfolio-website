@@ -165,8 +165,17 @@
 
 .work-image img {
   max-width: 100%;
-  max-height: 158px;
+  max-height: 120px;
   border-radius: 10px;
+}
+
+/* Compact "Tools and features" label + tech line so description always fits */
+.work-info > h4 {
+  font-size: 16px !important;
+  margin-top: 2px;
+}
+.work-info > p {
+  font-size: 12.5px !important;
 }
 
 .work-demo-badge {
