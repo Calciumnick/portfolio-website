@@ -61,8 +61,8 @@ const en = {
         whatsapp: "https://wa.me/971524893133"
     },
     skills: {
-        develop: { title: "FULL-STACK DEVELOPMENT", description: "Websites, web apps, dashboards and internal tools", details: "Need a website, a client portal, a dashboard or an internal tool? I do the front and the back, database and payments included, and ship it to production. No 'designer here, developer there' — one person owns the whole result.", tools: ["Python", "Node", "React", "TypeScript", "FastAPI", "PostgreSQL", "REST APIs", "Docker", "Git", "Vercel"] },
-        design: { title: "AUTOMATION & AI", description: "Kill the manual routine, add AI where it pays off", details: "If something is done by hand every day, it can usually be handed to a program. I connect your tools together, automate collecting and processing data, and where it helps, plug in AI to read documents, sort things and flag what matters — so you open one panel instead of ten tabs.", tools: ["Automation", "REST APIs", "Webhooks", "LLMs", "Computer Vision", "Scraping", "Monitoring", "Dashboards", "Pandas", "VPS"] }
+        develop: { title: "FULL-STACK DEVELOPMENT", description: "Websites, web apps, dashboards and internal tools", details: "Need a website, a client portal, a dashboard or an internal tool? I build the front and the back — database, payments and deployment included. One person owns the whole result.", tools: ["Python", "Node", "React", "TypeScript", "FastAPI", "PostgreSQL", "REST APIs", "Docker", "Git", "Vercel"] },
+        design: { title: "AUTOMATION & AI", description: "Kill the manual routine, add AI where it pays off", details: "If it's done by hand every day, it can usually be handed to a program. I connect your tools, automate collecting and processing data, and add AI where it pays off — one panel instead of ten tabs.", tools: ["Automation", "REST APIs", "Webhooks", "LLMs", "Computer Vision", "Scraping", "Monitoring", "Dashboards", "Pandas", "VPS"] }
     },
     ui: {
         hello: "Hello! I'm",
@@ -143,8 +143,8 @@ const ru: typeof en = {
         whatsapp: "https://wa.me/971524893133"
     },
     skills: {
-        develop: { title: "FULL-STACK РАЗРАБОТКА", description: "Сайты, веб-приложения, дашборды и внутренние инструменты", details: "Нужен сайт, личный кабинет, дашборд или внутренний инструмент? Сделаю фронт и бэк целиком, с базой и оплатами, и выкачу в прод. Без «дизайнер отдельно, программист отдельно» — за результат отвечает один человек.", tools: ["Python", "Node", "React", "TypeScript", "FastAPI", "PostgreSQL", "REST API", "Docker", "Git", "Vercel"] },
-        design: { title: "АВТОМАТИЗАЦИЯ И ИИ", description: "Убрать ручную рутину и добавить ИИ там, где он окупается", details: "Если что-то делается руками каждый день — обычно это можно отдать программе. Соединяю ваши сервисы между собой, автоматизирую сбор и обработку данных, а где помогает — подключаю ИИ, чтобы он читал документы, сортировал и подсказывал важное. Вы открываете одну панель вместо десяти вкладок.", tools: ["Автоматизация", "REST API", "Webhooks", "LLM", "Computer Vision", "Парсинг", "Мониторинг", "Дашборды", "Pandas", "VPS"] }
+        develop: { title: "FULL-STACK РАЗРАБОТКА", description: "Сайты, веб-приложения, дашборды и внутренние инструменты", details: "Нужен сайт, личный кабинет, дашборд или внутренний инструмент? Делаю фронт и бэк целиком — с базой, оплатами и деплоем. За весь результат отвечает один человек.", tools: ["Python", "Node", "React", "TypeScript", "FastAPI", "PostgreSQL", "REST API", "Docker", "Git", "Vercel"] },
+        design: { title: "АВТОМАТИЗАЦИЯ И ИИ", description: "Убрать ручную рутину и добавить ИИ там, где он окупается", details: "Если что-то делается руками каждый день — обычно это можно отдать программе. Соединяю ваши сервисы, автоматизирую сбор и обработку данных, добавляю ИИ где он окупается — одна панель вместо десяти вкладок.", tools: ["Автоматизация", "REST API", "Webhooks", "LLM", "Computer Vision", "Парсинг", "Мониторинг", "Дашборды", "Pandas", "VPS"] }
     },
     ui: {
         hello: "Привет! Я",
