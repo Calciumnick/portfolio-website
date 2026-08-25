@@ -73,6 +73,16 @@
     margin: 0;
   }
 
+  /* «Hello! I'm» — сделать заметнее на телефоне */
+  .landing-intro h2 {
+    color: #cbb6ff !important;
+    opacity: 1 !important;
+    font-weight: 500 !important;
+    font-size: 19px !important;
+    letter-spacing: 3px !important;
+    margin-bottom: 6px !important;
+  }
+
   /* Ensure name parts display correctly */
   .landing-intro h1 br {
     display: block;
