@@ -12,28 +12,11 @@ interface Props {
 const WorkImage = (props: Props) => {
   const [isVideo, setIsVideo] = useState(false);
   const [video, setVideo] = useState("");
-  const [zoomed, setZoomed] = useState(false);
   const isExternalLink = Boolean(props.link && !props.link.startsWith("/"));
 
-  const toggleZoom = (e: React.MouseEvent) => {
-    if (!props.image) return;
-    e.preventDefault();
-    e.stopPropagation();
-    setZoomed((z) => !z);
-  };
-
   const media = props.image ? (
-    <img
-      src={props.image}
-      alt={props.alt}
-      loading="lazy"
-      onClick={toggleZoom}
-      className="work-img-clickable"
-      data-cursor={"disable"}
-    />
-  ) : (
-    <div className="work-placeholder"><span>{props.alt}</span></div>
-  );
+    <img src={props.image} alt={props.alt} loading="lazy" />
+  ) : null;
 
   const handleMouseEnter = async () => {
     if (props.video) {
@@ -88,11 +71,6 @@ const WorkImage = (props: Props) => {
         >
           {media}
           {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
-        </div>
-      )}
-      {zoomed && props.image && (
-        <div className="work-img-lightbox" onClick={toggleZoom} data-cursor={"disable"}>
-          <img src={props.image} alt={props.alt} onClick={toggleZoom} />
         </div>
       )}
     </div>
