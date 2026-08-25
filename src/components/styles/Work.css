@@ -216,7 +216,7 @@
 
 @media only screen and (max-height: 900px) {
   .work-image img {
-    max-height: 165px;
+    max-height: 185px;
   }
 
   .work-box {
