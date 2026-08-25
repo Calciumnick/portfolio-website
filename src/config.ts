@@ -18,29 +18,38 @@ const en = {
     },
     experiences: [
         {
-            position: "Understand the real problem",
-            company: "not code for its own sake",
+            position: "Understand the task",
+            company: "find where the money leaks",
             period: "01",
             location: "Remote",
-            description: "First I find where time or money is actually leaking. Often the real task isn't the one that was described — spotting that is half the job.",
+            description: "I look past how the task was described to where time and money actually leak. Often those are two different things — and finding the real one is half the job.",
             responsibilities: [],
             technologies: []
         },
         {
-            position: "Build and connect",
-            company: "front, back, integrations",
+            position: "Propose a solution",
+            company: "simple, without the bloat",
             period: "02",
             location: "Remote",
-            description: "I get a working version up fast, show it, and adjust as we go. I wire in the tools and data that are actually needed instead of over-building.",
+            description: "I show what's worth building and what isn't, and take the shortest path to the result instead of over-engineering it.",
             responsibilities: [],
             technologies: []
         },
         {
-            position: "Ship it and keep it alive",
-            company: "deploy & monitoring",
+            position: "Build and ship",
+            company: "working version, deployed",
             period: "03",
             location: "Remote",
-            description: "I put it on a real server, set it to run on its own and recover from failures, and stay around to maintain and grow it.",
+            description: "I get a working version up fast, adjust it as we go, and deploy it to a real server — not a demo that only runs on my laptop.",
+            responsibilities: [],
+            technologies: []
+        },
+        {
+            position: "Support and grow",
+            company: "so it runs on its own",
+            period: "04",
+            location: "Remote",
+            description: "I set it up to keep running and recover from failures on its own, and I stay in touch to fix and improve it as the business changes.",
             responsibilities: [],
             technologies: []
         }
@@ -100,29 +109,38 @@ const ru: typeof en = {
     },
     experiences: [
         {
-            position: "Разбираюсь, что болит",
-            company: "не код ради кода",
+            position: "Разбираюсь в задаче",
+            company: "нахожу, где теряются деньги",
             period: "01",
             location: "Удалённо",
-            description: "Сначала нахожу, где реально утекают время или деньги. Часто настоящая задача — не та, что описали, и увидеть это — половина работы.",
+            description: "Смотрю не на то, как задачу описали, а где на самом деле утекают время и деньги. Часто это разные вещи — и найти настоящую задачу уже половина дела.",
             responsibilities: [],
             technologies: []
         },
         {
-            position: "Строю и подключаю",
-            company: "фронт, бэк, интеграции",
+            position: "Предлагаю решение",
+            company: "просто, без лишнего",
             period: "02",
             location: "Удалённо",
-            description: "Быстро поднимаю рабочую версию, показываю, правлю по ходу. Подключаю нужные сервисы и данные, а не изобретаю лишнее.",
+            description: "Показываю, что стоит делать, а что нет, и беру самый короткий путь к результату — без переусложнения.",
             responsibilities: [],
             technologies: []
         },
         {
-            position: "Запускаю и держу живым",
-            company: "деплой и мониторинг",
+            position: "Собираю и запускаю",
+            company: "рабочая версия, в проде",
             period: "03",
             location: "Удалённо",
-            description: "Выкатываю на реальный сервер, настраиваю так, чтобы работало само и восстанавливалось после сбоев, и остаюсь поддерживать и развивать.",
+            description: "Быстро поднимаю рабочую версию, правлю по ходу и выкатываю на реальный сервер — не демо, которое живёт только у меня на ноутбуке.",
+            responsibilities: [],
+            technologies: []
+        },
+        {
+            position: "Поддерживаю и развиваю",
+            company: "чтобы работало само",
+            period: "04",
+            location: "Удалённо",
+            description: "Настраиваю так, чтобы система работала и восстанавливалась после сбоев сама, и остаюсь на связи — чинить и улучшать по мере роста бизнеса.",
             responsibilities: [],
             technologies: []
         }
