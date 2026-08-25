@@ -1,0 +1,308 @@
+<!doctype html><html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0">
+<title>AutoFlow · Салон Аура</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+  :root{
+    --bg:#0e0c14; --bg2:#14111c; --panel:#181420; --panel2:#1e1929;
+    --line:#2a2436; --line2:#352d47;
+    --ink:#efeaf6; --ink2:#b7afc7; --ink3:#7d7591;
+    --accent:#b98cff; --accent2:#8a6bff; --accentSoft:#b98cff22;
+    --good:#4fd39a; --goodSoft:#4fd39a1f;
+    --warn:#f5b544; --warnSoft:#f5b5441f;
+    --bad:#ff6b8b; --badSoft:#ff6b8b1f;
+    --r:16px;
+    --font:"Manrope",system-ui,sans-serif;
+    --display:"Bricolage Grotesque","Manrope",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:
+      radial-gradient(1200px 500px at 85% -10%, #241a3a 0%, transparent 55%),
+      radial-gradient(900px 500px at 0% 0%, #1a1430 0%, transparent 50%),
+      var(--bg);
+    color:var(--ink); font-family:var(--font);
+    font-feature-settings:"ss01","cv11"; line-height:1.45; min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  .num{font-variant-numeric:tabular-nums}
+  .app{display:grid;grid-template-columns:236px 1fr;min-height:100vh}
+
+  /* Sidebar */
+  .side{border-right:1px solid var(--line);background:linear-gradient(180deg,var(--bg2),transparent);padding:22px 16px;display:flex;flex-direction:column;gap:26px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-family:var(--display);font-weight:800;color:#140f22;font-size:19px;box-shadow:0 6px 20px #8a6bff44}
+  .brand b{font-family:var(--display);font-weight:800;font-size:18px;letter-spacing:.2px}
+  .brand span{display:block;font-size:11px;color:var(--ink3);font-weight:600;letter-spacing:.3px}
+  .nav{display:flex;flex-direction:column;gap:3px}
+  .nav a{display:flex;align-items:center;gap:11px;padding:9px 11px;border-radius:10px;color:var(--ink2);text-decoration:none;font-size:13.5px;font-weight:600}
+  .nav a .ic{width:17px;height:17px;opacity:.85}
+  .nav a.active{background:var(--accentSoft);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line2)}
+  .nav a:hover:not(.active){background:#ffffff08;color:var(--ink)}
+  .side .owner{margin-top:auto;display:flex;align-items:center;gap:10px;padding:10px;border-radius:12px;background:var(--panel);border:1px solid var(--line)}
+  .ava{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#ffb0c8,#b98cff);display:grid;place-items:center;font-weight:800;color:#241a3a;font-size:13px}
+  .owner small{display:block;color:var(--ink3);font-size:11px;font-weight:600}
+  .owner b{font-size:13px;font-weight:700}
+
+  /* Main */
+  .main{padding:22px 26px 40px;min-width:0}
+  .top{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+  .top h1{font-family:var(--display);font-size:26px;font-weight:800;letter-spacing:.2px;text-wrap:balance}
+  .top .sub{color:var(--ink3);font-size:13px;font-weight:600;margin-top:2px}
+  .seg{display:flex;background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:3px}
+  .seg button{border:0;background:transparent;color:var(--ink2);font:inherit;font-size:12.5px;font-weight:700;padding:6px 13px;border-radius:8px;cursor:pointer}
+  .seg button.on{background:var(--accent);color:#160f24}
+
+  .grid{display:grid;gap:14px}
+  .kpis{grid-template-columns:repeat(6,1fr)}
+  @media(max-width:1160px){.kpis{grid-template-columns:repeat(3,1fr)}}
+  .card{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-radius:var(--r);padding:15px 16px}
+  .kpi .lab{display:flex;align-items:center;gap:7px;color:var(--ink3);font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+  .kpi .val{font-family:var(--display);font-size:25px;font-weight:800;margin-top:9px;letter-spacing:.2px}
+  .kpi .val small{font-size:14px;color:var(--ink3);font-weight:700}
+  .kpi .delta{margin-top:7px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:20px}
+  .up{color:var(--good);background:var(--goodSoft)}
+  .down{color:var(--bad);background:var(--badSoft)}
+  .flat{color:var(--warn);background:var(--warnSoft)}
+  .dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+  .row2{grid-template-columns:1.55fr 1fr;margin-top:14px}
+  @media(max-width:980px){.row2{grid-template-columns:1fr}}
+  .ph{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+  .ph h3{font-size:14.5px;font-weight:800;letter-spacing:.2px}
+  .ph .hint{font-size:11.5px;color:var(--ink3);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+
+  /* plan vs fact chart */
+  .chartwrap{position:relative;height:196px}
+  canvas{width:100%;height:100%;display:block}
+  .legend{display:flex;gap:16px;margin-top:12px;font-size:12px;color:var(--ink2);font-weight:600}
+  .legend i{width:10px;height:10px;border-radius:3px;display:inline-block;margin-right:6px;vertical-align:-1px}
+
+  /* service lines */
+  .lines{display:flex;flex-direction:column;gap:12px}
+  .line{display:grid;grid-template-columns:96px 1fr 66px;align-items:center;gap:12px}
+  .line .nm{font-size:13px;font-weight:700}
+  .line .bar{height:9px;border-radius:6px;background:#ffffff0d;overflow:hidden}
+  .line .bar span{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--accent2),var(--accent))}
+  .line .pf{text-align:right;font-size:12.5px;font-weight:800;color:var(--good)}
+  .line .pf.mid{color:var(--warn)}
+
+  /* masters table */
+  .tablewrap{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;min-width:520px}
+  th{font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:.5px;font-weight:700;text-align:left;padding:0 12px 10px;white-space:nowrap}
+  th.r,td.r{text-align:right}
+  td{padding:11px 12px;border-top:1px solid var(--line);font-size:13px;font-weight:600}
+  tbody tr:hover{background:#ffffff06}
+  .who{display:flex;align-items:center;gap:10px}
+  .who .a{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:800;color:#1c1530}
+  .pill{font-size:11.5px;font-weight:800;padding:3px 9px;border-radius:20px}
+  .pbar{height:6px;width:78px;border-radius:5px;background:#ffffff0d;overflow:hidden;display:inline-block;vertical-align:middle;margin-right:9px}
+  .pbar span{display:block;height:100%;border-radius:5px}
+
+  /* alerts */
+  .alerts{display:flex;flex-direction:column;gap:10px}
+  .al{display:flex;gap:11px;padding:11px 12px;border-radius:12px;background:var(--panel2);border:1px solid var(--line);border-left-width:3px}
+  .al.c{border-left-color:var(--bad)} .al.w{border-left-color:var(--warn)} .al.i{border-left-color:var(--accent)}
+  .al .stripe{font-size:16px;line-height:1}
+  .al b{font-size:12.8px;font-weight:800;display:block}
+  .al p{font-size:12px;color:var(--ink2);font-weight:600;margin-top:2px}
+  .al time{font-size:11px;color:var(--ink3);font-weight:700;white-space:nowrap}
+
+  .foot{margin-top:22px;text-align:center;color:var(--ink3);font-size:12px;font-weight:600}
+  .foot b{color:var(--ink2);font-family:var(--display);font-weight:800}
+  @media(max-width:720px){.app{grid-template-columns:1fr}.side{display:none}.main{padding:18px 14px 34px}}
+</style>
+
+<div class="app">
+  <aside class="side">
+    <div class="brand">
+      <div class="logo">A</div>
+      <div><b>AutoFlow</b><span>Салон «Аура»</span></div>
+    </div>
+    <nav class="nav">
+      <a class="active" href="#"><span class="ic">▦</span> Огляд</a>
+      <a href="#"><span class="ic">₴</span> Фінанси</a>
+      <a href="#"><span class="ic">✂</span> Напрямки</a>
+      <a href="#"><span class="ic">◔</span> Майстри</a>
+      <a href="#"><span class="ic">☺</span> Клієнти (CRM)</a>
+      <a href="#"><span class="ic">◈</span> Реклама</a>
+      <a href="#"><span class="ic">▤</span> Склад</a>
+      <a href="#"><span class="ic">⚑</span> Сповіщення</a>
+    </nav>
+    <div class="owner">
+      <div class="ava">ОВ</div>
+      <div><b>Олена В.</b><small>Власниця</small></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="top">
+      <div>
+        <h1>Огляд бізнесу</h1>
+        <div class="sub">Понеділок, 25 серпня 2026 · оновлено 2 хв тому</div>
+      </div>
+      <div class="seg">
+        <button>День</button><button class="on">Місяць</button><button>Квартал</button>
+      </div>
+    </div>
+
+    <!-- KPIs -->
+    <div class="grid kpis">
+      <div class="card kpi">
+        <div class="lab">Оборот, місяць</div>
+        <div class="val num">₴642<small>K</small></div>
+        <div class="delta up"><span class="dot"></span>+12.4%</div>
+      </div>
+      <div class="card kpi">
+        <div class="lab">Виконання плану</div>
+        <div class="val num">87<small>%</small></div>
+        <div class="delta flat"><span class="dot"></span>ще ₴83K</div>
+      </div>
+      <div class="card kpi">
+        <div class="lab">Чистий прибуток</div>
+        <div class="val num">₴188<small>K</small></div>
+        <div class="delta up"><span class="dot"></span>+9.1%</div>
+      </div>
+      <div class="card kpi">
+        <div class="lab">Кошти на рахунку</div>
+        <div class="val num">₴311<small>K</small></div>
+        <div class="delta up"><span class="dot"></span>ПриватБанк</div>
+      </div>
+      <div class="card kpi">
+        <div class="lab">Середній чек</div>
+        <div class="val num">₴1 240</div>
+        <div class="delta down"><span class="dot"></span>−3.2%</div>
+      </div>
+      <div class="card kpi">
+        <div class="lab">No-show</div>
+        <div class="val num">6.8<small>%</small></div>
+        <div class="delta down"><span class="dot"></span>+1.4 пп</div>
+      </div>
+    </div>
+
+    <!-- Chart + service lines -->
+    <div class="grid row2">
+      <div class="card">
+        <div class="ph"><h3>План vs Факт обороту</h3><span class="hint">серпень, ₴ тис.</span></div>
+        <div class="chartwrap"><canvas id="chart"></canvas></div>
+        <div class="legend">
+          <span><i style="background:linear-gradient(90deg,#8a6bff,#b98cff)"></i>Факт</span>
+          <span><i style="background:#4a4260"></i>План</span>
+          <span><i style="background:#4fd39a"></i>Прогноз до кінця місяця</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ph"><h3>Прибуток по напрямках</h3><span class="hint">рентаб.</span></div>
+        <div class="lines">
+          <div class="line"><div class="nm">Манікюр</div><div class="bar"><span style="width:92%"></span></div><div class="pf">54%</div></div>
+          <div class="line"><div class="nm">Перукарня</div><div class="bar"><span style="width:78%"></span></div><div class="pf">47%</div></div>
+          <div class="line"><div class="nm">Барбер</div><div class="bar"><span style="width:70%"></span></div><div class="pf">44%</div></div>
+          <div class="line"><div class="nm">Косметологія</div><div class="bar"><span style="width:61%"></span></div><div class="pf">39%</div></div>
+          <div class="line"><div class="nm">Брови / Візаж</div><div class="bar"><span style="width:52%"></span></div><div class="pf mid">31%</div></div>
+          <div class="line"><div class="nm">Масаж</div><div class="bar"><span style="width:38%"></span></div><div class="pf mid">24%</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Masters + alerts -->
+    <div class="grid row2">
+      <div class="card">
+        <div class="ph"><h3>Майстри — виконання плану</h3><span class="hint">місяць</span></div>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Майстер</th><th>Напрямок</th><th class="r">Оборот</th><th class="r">Клієнти</th><th>План</th><th class="r">Серед. чек</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><div class="who"><span class="a" style="background:#ffd08a">ІК</span>Ірина К.</div></td>
+                <td>Манікюр</td><td class="r num">₴96.4K</td><td class="r num">142</td>
+                <td><span class="pbar"><span style="width:100%;background:var(--good)"></span></span><b style="color:var(--good)">118%</b></td>
+                <td class="r num">₴1 390</td>
+              </tr>
+              <tr>
+                <td><div class="who"><span class="a" style="background:#b98cff">ОД</span>Оксана Д.</div></td>
+                <td>Перукарня</td><td class="r num">₴81.2K</td><td class="r num">98</td>
+                <td><span class="pbar"><span style="width:94%;background:var(--good)"></span></span><b style="color:var(--good)">94%</b></td>
+                <td class="r num">₴1 510</td>
+              </tr>
+              <tr>
+                <td><div class="who"><span class="a" style="background:#8ad9ff">МТ</span>Марк Т.</div></td>
+                <td>Барбер</td><td class="r num">₴74.9K</td><td class="r num">173</td>
+                <td><span class="pbar"><span style="width:88%;background:var(--good)"></span></span><b style="color:var(--good)">88%</b></td>
+                <td class="r num">₴680</td>
+              </tr>
+              <tr>
+                <td><div class="who"><span class="a" style="background:#ff9db5">ЛС</span>Ліза С.</div></td>
+                <td>Косметологія</td><td class="r num">₴58.1K</td><td class="r num">61</td>
+                <td><span class="pbar"><span style="width:72%;background:var(--warn)"></span></span><b style="color:var(--warn)">72%</b></td>
+                <td class="r num">₴1 940</td>
+              </tr>
+              <tr>
+                <td><div class="who"><span class="a" style="background:#c9b8ff">НР</span>Ніна Р.</div></td>
+                <td>Брови / Візаж</td><td class="r num">₴34.7K</td><td class="r num">88</td>
+                <td><span class="pbar"><span style="width:58%;background:var(--bad)"></span></span><b style="color:var(--bad)">58%</b></td>
+                <td class="r num">₴520</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="ph"><h3>Сповіщення</h3><span class="hint">авто</span></div>
+        <div class="alerts">
+          <div class="al c"><span class="stripe">🔴</span><div style="flex:1"><b>Ніна Р. відстає від плану</b><p>58% при 20 днях, що минули — ризик недовиконання ₴25K.</p></div><time>зараз</time></div>
+          <div class="al w"><span class="stripe">🟡</span><div style="flex:1"><b>Зростає No-show</b><p>6.8% за тиждень (+1.4 пп). Втрачений оборот ₴14.2K.</p></div><time>1 год</time></div>
+          <div class="al w"><span class="stripe">🟡</span><div style="flex:1"><b>Закінчується матеріал</b><p>Гель-лак OPI — залишок нижче мінімального. Потрібне замовлення.</p></div><time>3 год</time></div>
+          <div class="al w"><span class="stripe">🟡</span><div style="flex:1"><b>Падає запис на наступний тиждень</b><p>Заповнено лише 61% вікон (−18% до минулого тижня). Варто підсилити рекламу.</p></div><time>сьогодні</time></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot">Product demo of <b>AutoFlow</b> · illustrative data · real project delivered under NDA</div>
+  </main>
+</div>
+
+<script>
+(function(){
+  var c=document.getElementById('chart'); if(!c)return;
+  var ctx=c.getContext('2d'), DPR=Math.min(window.devicePixelRatio||1,2);
+  function draw(){
+    var w=c.clientWidth,h=c.clientHeight; c.width=w*DPR; c.height=h*DPR; ctx.setTransform(DPR,0,0,DPR,0,0); ctx.clearRect(0,0,w,h);
+    var fact=[]; var base=[380,410,430,455,470,500,520,545,560,590,610,642];
+    var plan=725; var labels=['1','','5','','10','','15','','20','','25','30'];
+    var pad={l:34,r:8,t:10,b:22}, gw=w-pad.l-pad.r, gh=h-pad.t-pad.b;
+    var max=760, min=340;
+    function X(i){return pad.l+gw*i/11}
+    function Y(v){return pad.t+gh*(1-(v-min)/(max-min))}
+    // grid + y labels
+    ctx.font='10px Manrope, sans-serif'; ctx.fillStyle='#7d7591'; ctx.textAlign='right';
+    [400,500,600,700].forEach(function(v){ var y=Y(v); ctx.strokeStyle='#ffffff0d'; ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(w-pad.r,y);ctx.stroke(); ctx.fillText(v,pad.l-6,y+3); });
+    // plan line (dashed)
+    var yp=Y(plan); ctx.setLineDash([5,5]); ctx.strokeStyle='#6a6088'; ctx.lineWidth=1.5; ctx.beginPath();ctx.moveTo(pad.l,yp);ctx.lineTo(w-pad.r,yp);ctx.stroke(); ctx.setLineDash([]);
+    ctx.textAlign='left'; ctx.fillStyle='#8b829e'; ctx.fillText('план 725K',pad.l+4,yp-5);
+    // area fact (solid to index 11 which is 'today' -> actually forecast after)
+    var solidEnd=11;
+    var grad=ctx.createLinearGradient(0,pad.t,0,pad.t+gh); grad.addColorStop(0,'#b98cff55'); grad.addColorStop(1,'#b98cff00');
+    ctx.beginPath(); ctx.moveTo(X(0),Y(base[0]));
+    for(var i=1;i<=solidEnd;i++) ctx.lineTo(X(i),Y(base[i]));
+    ctx.lineTo(X(solidEnd),pad.t+gh); ctx.lineTo(X(0),pad.t+gh); ctx.closePath(); ctx.fillStyle=grad; ctx.fill();
+    // fact stroke
+    ctx.beginPath(); ctx.moveTo(X(0),Y(base[0]));
+    for(i=1;i<=solidEnd;i++) ctx.lineTo(X(i),Y(base[i]));
+    ctx.strokeStyle='#c79dff'; ctx.lineWidth=2.4; ctx.lineJoin='round'; ctx.stroke();
+    // forecast dashed continuation
+    ctx.setLineDash([4,4]); ctx.strokeStyle='#4fd39a'; ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(X(11),Y(642)); ctx.lineTo(X(11)+ (X(1)-X(0)) ,Y(700)); ctx.stroke(); ctx.setLineDash([]);
+    // endpoint dot
+    ctx.fillStyle='#fff'; ctx.beginPath(); ctx.arc(X(11),Y(642),3.5,0,7); ctx.fill();
+    ctx.strokeStyle='#b98cff'; ctx.lineWidth=2; ctx.beginPath(); ctx.arc(X(11),Y(642),5.5,0,7); ctx.stroke();
+    // x labels
+    ctx.fillStyle='#7d7591'; ctx.textAlign='center';
+    labels.forEach(function(t,i){ if(t) ctx.fillText(t,X(i),h-6); });
+  }
+  draw(); window.addEventListener('resize',draw);
+})();
+</script>
+</body></html>
