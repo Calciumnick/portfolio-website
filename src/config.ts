@@ -14,7 +14,7 @@ const en = {
     },
     about: {
         title: "About Me",
-        description: "I'm Mykyta. I build software that takes a real, annoying problem off someone's plate — and then keeps working without them. Usually it's the boring, repetitive part of a business: reports nobody wants to pull by hand, leads that slip through, data sitting in five different places. I'm most useful when the task is clear but no one has time to do it properly. I like starting from the actual problem, not the tech — and I don't hand over something that only runs on my laptop. If I build it, it's live and it stays up."
+        description: "Companies lose time and money every day to manual routine — reports pulled by hand, leads that slip through, data scattered across a dozen different tools. I turn that routine into software that does the work by itself. I take a project from the first conversation to a result in production: web apps and dashboards, integrations between services, and automation or AI wherever it actually pays off. What you get isn't a prototype that runs on my laptop — it's a stable product on a real server, monitored, and running without anyone babysitting it."
     },
     experiences: [
         {
@@ -96,7 +96,7 @@ const ru: typeof en = {
     },
     about: {
         title: "Обо мне",
-        description: "Я Никита. Делаю софт, который снимает с человека реальную надоевшую задачу — и дальше работает без него. Обычно это скучная повторяющаяся часть бизнеса: отчёты, которые никто не хочет собирать руками; заявки, которые теряются; данные, разбросанные по пяти местам. Я полезнее всего там, где задача понятна, но ни у кого нет времени сделать её нормально. Люблю идти от самой проблемы, а не от технологий — и не отдаю то, что работает только у меня на ноутбуке. Если сделал — оно запущено и держится."
+        description: "Каждый день бизнес теряет время и деньги на ручной рутине — отчёты собирают вручную, заявки теряются, данные разбросаны по десятку разных сервисов. Я превращаю эту рутину в софт, который делает работу сам. Веду проект от первого разговора до результата в продакшене: веб-приложения и дашборды, интеграции между сервисами, автоматизация и ИИ там, где он реально окупается. На выходе — не прототип «на ноутбуке», а стабильный продукт на сервере, под мониторингом, работающий без ручного участия."
     },
     experiences: [
         {
