@@ -44,9 +44,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
   }, []);
 
   useEffect(() => {
-    // 3D тяжёлый — на мобилке/планшете не монтируем (там показываем фото).
-    if (window.innerWidth <= 1024) return;
-
+    // 3D монтируем и на мобилке (после простоя, чтобы не грузить первый экран).
     let timeoutId: ReturnType<typeof setTimeout> | undefined;
     let idleId: number | undefined;
     const win = window as Window & {
