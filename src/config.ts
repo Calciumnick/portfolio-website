@@ -14,7 +14,7 @@ const en = {
     },
     about: {
         title: "About Me",
-        description: "I'm Mykyta Koltsov — a full-stack developer with an entrepreneur's vision. I spot where a business loses time or money and automate it into a system that pays for itself. If it can be programmed, I build it — web apps, landing pages, dashboards, bots, integrations with any API. My strong side is automation and AI-driven data work: LLMs and computer vision wired into pipelines that filter, classify and decide. Full stack end-to-end — Python/Node, React/TypeScript, PostgreSQL — deployed and running."
+        description: "I'm Mykyta Koltsov — a full-stack developer who turns business problems into software that runs itself. If it can be coded, I build it: web apps, dashboards, Telegram bots, automations that plug into any API. My strongest side is AI and data — LLMs and computer vision wired into pipelines that read, filter and decide at scale, behind a clean interface anyone can use. And I ship the whole thing end-to-end — React/TypeScript on the front, Python or Node and PostgreSQL behind it — deployed on real servers, monitored, and built to keep running without me."
     },
     experiences: [
         {
@@ -94,7 +94,7 @@ const ru: typeof en = {
     },
     about: {
         title: "Обо мне",
-        description: "Я Mykyta Koltsov — full-stack разработчик с предпринимательским видением. Вижу, где бизнес теряет время или деньги, и автоматизирую это в систему, которая себя окупает. Если это можно запрограммировать — сделаю: веб-приложения, лендинги, дашборды, боты, интеграции с любым API. Сильная сторона — автоматизация и работа с данными через ИИ: LLM и компьютерное зрение в конвейерах, которые фильтруют, классифицируют и решают. Весь стек под ключ — Python/Node, React/TypeScript, PostgreSQL — с деплоем."
+        description: "Я Mykyta Koltsov — full-stack разработчик, который превращает бизнес-задачи в софт, работающий сам. Если это можно закодить — сделаю: веб-приложения, дашборды, Telegram-боты, автоматизации с подключением к любому API. Моя сильная сторона — ИИ и данные: LLM и компьютерное зрение в конвейерах, которые читают, фильтруют и принимают решения на потоке, за понятным интерфейсом. И собираю всё под ключ — фронт на React/TypeScript, бэк на Python или Node и PostgreSQL — с деплоем на реальные серверы, мониторингом и запасом прочности, чтобы работало без меня."
     },
     experiences: [
         {
