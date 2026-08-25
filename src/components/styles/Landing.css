@@ -19,8 +19,9 @@
   }
   h2.landing-info-h2 {
     width: 100% !important;
-    margin: 0 !important;
+    margin: 0 0 14px !important;
     font-size: 30px !important;
+    line-height: 1 !important;
     text-align: center !important;
   }
   .landing-info h2 {
