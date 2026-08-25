@@ -157,25 +157,18 @@
     z-index: 1;
     order: 2;
     /* Second: Photo */
-    /* Add fade mask to bottom */
-    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
     pointer-events: none;
     transform: none !important;
   }
 
   .mobile-photo img {
     display: block;
-    width: 260px;
-    max-width: 66%;
-    aspect-ratio: 1 / 1;
+    width: 300px;
+    max-width: 82%;
     height: auto;
     margin: 0 auto;
-    object-fit: cover;
-    object-position: top center;
-    border-radius: 50%;
+    border-radius: 14px;
     border: none;
-    filter: drop-shadow(0 0 40px rgba(194, 164, 255, 0.35));
   }
 }
 
