@@ -85,13 +85,14 @@ export function setCharTimeline(
           scrollTrigger: {
             trigger: ".whatIDO",
             start: "top 85%",
-            end: "bottom 20%",
+            endTrigger: ".career-section",
+            end: "bottom 40%",
             scrub: true,
           },
         })
-        .fromTo(".character-model", { opacity: 0 }, { opacity: 1, duration: 0.15 })
-        .to(".character-model", { opacity: 1, duration: 0.7 })
-        .to(".character-model", { opacity: 0, duration: 0.15 });
+        .fromTo(".character-model", { opacity: 0 }, { opacity: 1, duration: 0.08 })
+        .to(".character-model", { opacity: 1, duration: 0.87 })
+        .to(".character-model", { opacity: 0, duration: 0.05 });
     }
   } else if (window.innerWidth > 1024) {
     if (character) {
