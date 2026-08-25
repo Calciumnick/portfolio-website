@@ -73,21 +73,25 @@ export function setCharTimeline(
       if (screenLight) screenLight.material.opacity = 1;
       camera.position.set(0, 8.4, 92);
       camera.updateProjectionMatrix();
-      character.rotation.set(0.06, 0.5, 0);
-      if (neckBone) neckBone.rotation.x = 0.5;
+      // Сидит боком (три четверти), голова к монитору — как на десктопе.
+      character.rotation.set(0.12, 0.92, 0);
+      if (neckBone) neckBone.rotation.x = 0.6;
       gsap.set(".character-model", { opacity: 0, x: 0, y: 0 });
       gsap.set(".character-rim", { opacity: 0 });
       gsap.set(".what-box-in", { display: "flex" });
-      // Проявляем только когда доскроллил до WHAT I DO
-      ScrollTrigger.create({
-        trigger: ".whatIDO",
-        start: "top 75%",
-        end: "bottom 15%",
-        onEnter: () => gsap.to(".character-model", { opacity: 1, duration: 0.6 }),
-        onLeave: () => gsap.to(".character-model", { opacity: 0, duration: 0.4 }),
-        onEnterBack: () => gsap.to(".character-model", { opacity: 1, duration: 0.6 }),
-        onLeaveBack: () => gsap.to(".character-model", { opacity: 0, duration: 0.4 }),
-      });
+      // Плавное появление/исчезание, привязанное к скроллу секции WHAT I DO.
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".whatIDO",
+            start: "top 85%",
+            end: "bottom 20%",
+            scrub: true,
+          },
+        })
+        .fromTo(".character-model", { opacity: 0 }, { opacity: 1, duration: 0.15 })
+        .to(".character-model", { opacity: 1, duration: 0.7 })
+        .to(".character-model", { opacity: 0, duration: 0.15 });
     }
   } else if (window.innerWidth > 1024) {
     if (character) {
