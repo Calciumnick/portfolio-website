@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { MdArrowOutward } from "react-icons/md";
+import { MdArrowOutward, MdKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { useConfig } from "../context/LanguageProvider";
 
 interface Props {
   image: string;
@@ -10,12 +11,19 @@ interface Props {
 }
 
 const WorkImage = (props: Props) => {
+  const config = useConfig();
   const [isVideo, setIsVideo] = useState(false);
   const [video, setVideo] = useState("");
   const isExternalLink = Boolean(props.link && !props.link.startsWith("/"));
 
   const media = props.image ? (
     <img src={props.image} alt={props.alt} loading="lazy" />
+  ) : null;
+
+  const clickHint = props.link && props.image ? (
+    <div className="work-click-hint">
+      {config.ui.clickHint} <MdKeyboardArrowDown />
+    </div>
   ) : null;
 
   const handleMouseEnter = async () => {
@@ -44,6 +52,7 @@ const WorkImage = (props: Props) => {
             <div className="work-link">
               <MdArrowOutward />
             </div>
+            {clickHint}
             {media}
             {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
           </a>
@@ -58,6 +67,7 @@ const WorkImage = (props: Props) => {
             <div className="work-link">
               <MdArrowOutward />
             </div>
+            {clickHint}
             {media}
             {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
           </Link>

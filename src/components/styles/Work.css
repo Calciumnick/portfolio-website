@@ -169,6 +169,30 @@
   border-radius: 10px;
 }
 
+.work-click-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accentColor);
+  margin-bottom: 8px;
+  opacity: 0.9;
+  animation: clickHintBounce 1.6s ease-in-out infinite;
+}
+
+.work-click-hint svg {
+  font-size: 18px;
+}
+
+@keyframes clickHintBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.75; }
+  50% { transform: translateY(4px); opacity: 1; }
+}
+
 .work-img-clickable {
   cursor: zoom-in;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
